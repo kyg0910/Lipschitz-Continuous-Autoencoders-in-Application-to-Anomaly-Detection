@@ -6,6 +6,7 @@ This github provides the implementation used for the results in "Lipschitz Conti
 <pre>
 .
 ├── data_celeba
+│   ├── readme_celeba.md
 ├── Datapreprocessing_CelebA.ipynb
 ├── README.md
 └── src
