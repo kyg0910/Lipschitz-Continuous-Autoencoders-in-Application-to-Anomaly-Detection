@@ -3,17 +3,18 @@
 This github provides the implementation used for the results in "Lipschitz Continuous Autoencoders in Application to Anomaly Detection" accepted for AISTATS 2020.
 
 ## Directory tree
-.<br/>
-├── data_celeba<br/>
-├── Datapreprocessing_CelebA(uint8).ipynb
+<pre>
+.
+├── data_celeba
+├── Datapreprocessing_CelebA.ipynb
 ├── README.md
 └── src
     ├── architecture.py
     ├── base.py
     ├── configuration.py
     ├── dataset
-    │   ├── celeba.py
-    │   ├── fmnist.py
+    │   ├── celeba.py
+    │   ├── fmnist.py
     │   ├── kdd99.py
     │   ├── main.py
     │   └── mnist.py
@@ -30,7 +31,7 @@ This github provides the implementation used for the results in "Lipschitz Conti
     │       └── run_svdd.py
     ├── run_lcae.py
     └── utils.py
-
+</pre>
 ## Commands to run experiments
 
 We provide commands to run experiments in manuscript and supplementary material. Explanations about arguments are attached in 'Explanation about argments' in this document. Before running experiments on CelebA, please download and pre-process dataset using 'Datapreprocessing_CelebA.ipynb'.
@@ -118,26 +119,26 @@ python3 main.py 'alad' 'celeba' -n 5 -e 100 -c 5 -g 0 -N -1 --a 15
 
 ## Explanations about argments
 
-a (or attribute): attribute class in experiments with CelebA. Default value is 0.
-C (or lipschitzconstant): Lipschitz constant ('K' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.95.
-c (or contamratio): contaminated ratio in training set. Default value is 0. Possible choices are 0 and 5.
-d (or decide): number or list of experiment. Possible choices are 'int' and 'list'.
-dataset: the name of the dataset you want to run the experiment on. Possible choices are 'kdd99', 'mnist', 'fmnist', and 'celeba'.
-degree: degree of L-p norm in experiments with ALAD. Default value is 1.
-e (or epoch): number of epochs. Default value is 50.
-enable_dzz: enable dzz discriminator in experiments with ALAD. Default value is True.
-enable_early_stop: enable early_stopping in experiments with ALAD. Default value is True.
-enable_sm: enable TF summaries in experiments with ALAD. Default value is True.
-g (or gpu): which gpu to use. Default value is 0.
-m: mode/method for discriminator loss in experiments with ALAD. Possible choices are 'cross-e' and 'fm'. Default value is 'fm'.
-m (or mmdweight): mmd loss weight ('lambda' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.0.
-model: the model name of the example you want to run. Possible choices are 'lcae', 'svdd', and 'alad'.
-N (or normalclass): normal class in experiments on MNIST, Fashion-MNIST, and CelebA. Possible choices are 0, 1, ..., 9 in MNIST and Fashion-MNIST, and-1 and 1 in CelebA. Default value is 0.
-n (or number): number or list of experiment. Default value is 10.
-sn: enable spectral_norm in experiments with ALAD. Default value is True.
-t (or tsne): tsne for original/reconstructed data in experiments with LCAE. Default value is False.
-l (or lipschitzweight): Lipschitz loss weight ('phi' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.0.
-w: weight in experiments with ALAD. Default value is 0.1.
+a (or attribute): attribute class in experiments with CelebA. Default value is 0.<br/>
+C (or lipschitzconstant): Lipschitz constant ('K' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.95.<br/>
+c (or contamratio): contaminated ratio in training set. Default value is 0. Possible choices are 0 and 5.<br/>
+d (or decide): number or list of experiment. Possible choices are 'int' and 'list'.<br/>
+dataset: the name of the dataset you want to run the experiment on. Possible choices are 'kdd99', 'mnist', 'fmnist', and 'celeba'.<br/>
+degree: degree of L-p norm in experiments with ALAD. Default value is 1.<br/>
+e (or epoch): number of epochs. Default value is 50.<br/>
+enable_dzz: enable dzz discriminator in experiments with ALAD. Default value is True.<br/>
+enable_early_stop: enable early_stopping in experiments with ALAD. Default value is True.<br/>
+enable_sm: enable TF summaries in experiments with ALAD. Default value is True.<br/>
+g (or gpu): which gpu to use. Default value is 0.<br/>
+m: mode/method for discriminator loss in experiments with ALAD. Possible choices are 'cross-e' and 'fm'. Default value is 'fm'.<br/>
+m (or mmdweight): mmd loss weight ('lambda' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.0.<br/>
+model: the model name of the example you want to run. Possible choices are 'lcae', 'svdd', and 'alad'.<br/>
+N (or normalclass): normal class in experiments on MNIST, Fashion-MNIST, and CelebA. Possible choices are 0, 1, ..., 9 in MNIST and Fashion-MNIST, and-1 and 1 in CelebA. Default value is 0.<br/>
+n (or number): number or list of experiment. Default value is 10.<br/>
+sn: enable spectral_norm in experiments with ALAD. Default value is True.<br/>
+t (or tsne): tsne for original/reconstructed data in experiments with LCAE. Default value is False.<br/>
+l (or lipschitzweight): Lipschitz loss weight ('phi' in the equation (2) in the manuscript) in experiments with LCAE. Default value is 0.0.<br/>
+w: weight in experiments with ALAD. Default value is 0.1.<br/>
 
 ## Reproducibility
 
@@ -145,26 +146,25 @@ The results of the proposed method and Deep SVDD are reproducible while that of 
 
 ## Dependency
 
-argparse                      1.1
-imageio                       2.3.0  
-ipykernel                     4.8.2
-json                          2.0.9
-logging                       0.5.1.2
-matplotlib                    3.1.2  
-numpy                         1.16.1  
-pandas                        0.25.3
-pickleshare                   0.7.4
-PIL                           5.1.0
-python                        3.6.5
-skimage                       0.16.2
-sklearn                       0.20.2
-tensorflow                    1.9.0
-torch                         1.0.1.post2
-torchvision                   0.2.2 
-urllib3                       1.22
+argparse                      1.1<br/>
+imageio                       2.3.0<br/>
+ipykernel                     4.8.2<br/>
+json                          2.0.9<br/>
+logging                       0.5.1.2<br/>
+matplotlib                    3.1.2<br/>
+numpy                         1.16.1<br/>
+pandas                        0.25.3<br/>
+pickleshare                   0.7.4<br/>
+PIL                           5.1.0<br/>
+python                        3.6.5<br/>
+skimage                       0.16.2<br/>
+sklearn                       0.20.2<br/>
+tensorflow                    1.9.0<br/>
+torch                         1.0.1.post2<br/>
+torchvision                   0.2.2<br/> 
+urllib3                       1.22<br/>
 
 ## References for the implementation
 
-[1] Ruff, Lukas, et al. "Deep one-class classification." International conference on machine learning. 2018. URL: https://github.com/lukasruff/Deep-SVDD-PyTorch
-
+[1] Ruff, Lukas, et al. "Deep one-class classification." International conference on machine learning. 2018. URL: https://github.com/lukasruff/Deep-SVDD-PyTorch<br/>
 [2] Zenati, Houssam, et al. "Adversarially learned anomaly detection." 2018 IEEE International Conference on Data Mining (ICDM). IEEE, 2018. URL: https://github.com/houssamzenati/Adversarially-Learned-Anomaly-Detection
