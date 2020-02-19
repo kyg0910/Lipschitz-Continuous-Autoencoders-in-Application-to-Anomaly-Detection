@@ -3,8 +3,8 @@
 This github provides the implementation used for the results in "Lipschitz Continuous Autoencoders in Application to Anomaly Detection" accepted for AISTATS 2020.
 
 ## Directory tree
-.
-├── data_celeba
+.<br/>
+├── data_celeba<br/>
 ├── Datapreprocessing_CelebA(uint8).ipynb
 ├── README.md
 └── src
