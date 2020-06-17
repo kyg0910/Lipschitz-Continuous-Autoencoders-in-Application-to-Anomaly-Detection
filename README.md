@@ -39,7 +39,7 @@ We provide commands to run experiments in manuscript and supplementary material.
 
 (1) Proposed method
 
-1. KDD99
+1. (KDD99)
 To run experiments on Table 4 in the manuscript, please execute the following command at the src folder.
 ```bash
 # KDD99 with uncontaminated training dataset (0%)
@@ -49,7 +49,7 @@ python3 main.py 'lcae' 'kdd99' -n 20 -e 200 -m 0.0 -l 10.0 -C 0.7 -c 5 -g 0
 ```
 To run experiments on Tables 2 and 3 in the manuscript and Tables 5 and 6 in the supplementary material, please execute the above command after setting n to be 10 and varying m, l, and C.
 
-2. MNIST and Fashion-MNIST
+2. (MNIST and Fashion-MNIST)
 To run experiments on Tables 7 and 8 in the supplementary material, please execute the following command at the src folder.
 ```bash
 # MNIST with uncontaminated training dataset (0%)
@@ -62,7 +62,7 @@ python3 main.py 'lcae' 'fmnist' -n 10 -e 50 -m 2.0 -l 2.0 -C 0.8 -c 0 -g 0 -N 0
 python3 main.py 'lcae' 'fmnist' -n 10 -e 50 -m 2.0 -l 2.0 -C 0.8 -c 5 -g 0 -N 0
 ```
   
-3. CelebA
+3. (CelebA)
 To run experiments on Table 4 in the manuscript, please execute the following command at the src folder.
 ```bash
 # CelebA (glasses) with uncontaminated training dataset (0%)
@@ -72,7 +72,7 @@ python3 main.py 'lcae' 'celeba' -n 5 -e 100 -m 2.0 -l 2.0 -C 0.8 -c 5 -g 0 -N -1
 ```
 (2) Other methods
 
-1. KDD99
+1. (KDD99)
 To run experiments on Table 4 in the manuscript, please execute the following command at the src folder.
 ```bash
 # Deep SVDD: KDD99 with uncontaminated training dataset (0%)
@@ -85,7 +85,7 @@ python3 main.py 'alad' 'kdd99' -n 20 -e 200 -c 0 -g 0
 python3 main.py 'alad' 'kdd99' -n 20 -e 200 -c 5 -g 0
 ```
 
-2. MNIST and Fashion-MNIST
+2. (MNIST and Fashion-MNIST)
 To run experiments on Tables 7 and 8 in the supplementary material, please execute the following command at the src folder.
 ```bash
 # Deep SVDD: MNIST with uncontaminated training dataset (0%)
@@ -105,7 +105,7 @@ python3 main.py 'alad' 'fmnist' -n 10 -e 50 -c 0 -g 0 -N 0
 # ALAD: Fashion-MNIST with contaminated training dataset (5%)
 python3 main.py 'alad' 'fmnist' -n 10 -e 50 -c 5 -g 0 -N 0
 ```
-3. CelebA
+3. (CelebA)
 To run experiments on Table 4 in the manuscript, please execute the following command at the src folder.
 ```bash
 # Deep SVDD: CelebA (glasses) with uncontaminated training dataset (0%)
