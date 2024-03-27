@@ -143,7 +143,7 @@ w: weight in experiments with ALAD. Default value is 0.1.<br/>
 
 ## Reproducibility
 
-The results of the proposed method and Deep SVDD are reproducible while that of ALAD is not. For Deep SVDD and ALAD, we adopt and modified codes published by [1] and [2], respectively. Both codes were not reproducible when GPU is used, so we revised the code to guarantee reproducibility. The modified Deep SVDD implementation gives consistent results in the system environment we elaborated in 'Dependency'. In contrast, the code from ALAD work is built in TensorFlow of low version, so reproducibility can not be achieved. We tried to reduce oscilations as small as possible. For details about the reproducibility issue in TensorFlow, please refer https://github.com/NVIDIA/tensorflow-determinism.
+The results of the proposed method and Deep SVDD are reproducible, while those of ALAD are not. For Deep SVDD and ALAD, we adopted and modified the codes published by [1] and [2], respectively. Initially, both codes were not reproducible when a GPU was used, so we revised the code to ensure reproducibility. The modified Deep SVDD implementation yields consistent results in the system environment detailed in the 'Dependency' section. In contrast, the code from the ALAD work, which is built on an older version of TensorFlow, does not achieve reproducibility. We attempted to minimize oscillations as much as possible. For details about the reproducibility issue in TensorFlow, please refer https://github.com/NVIDIA/tensorflow-determinism.
 
 ## Dependency
 
